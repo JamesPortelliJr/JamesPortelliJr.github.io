@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+    <title> Project Portflio Page </title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <section class = "mainImg">
+        <div class = "inner">
+
+        </div>
+    </section>
+    <section class = "mainRight">
+        <div class = "content">
+            <h1>James Portelli</h1>
+            <h3>Project Portfolio Page</h3>
+            <p>
+            Email : jamesportellijr@gmail.com <br>
+            LinkedIn : 
+            </p>
+    </div>
+    </section>
+    <!-- Modal for Shopping Cart Project-->
+    <div id="cartProject" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close1">&times;</span>
+          <p>Java application which uses JDBC to connect to a local database stored on my laptop, and SQL, in order to store/pull user login, and personal 
+            information. (Database created before I took a class on database management, and learned proper normalization. **Check  
+            TV Show Project database for progression.**, Languages Used: Java, SQL) </p>
+        </div>
+      
+      </div>
+    <!-- Modal for TV Show DB Project-->
+    <div id="databaseProject" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close2">&times;</span>
+            <p> Group Project using SQL database created to store TV Shows, Actors/Actress', Episodes, Genres, and Participants info. Database also used to keep track of
+              particiapants individual viewing occurences of TV shows. (Follows Primary/Foreign Key constraints and Normalization, 
+              Languages used: SQL) </p>
+          </div>
+    </div>
+    <!-- Modal for Fortnite Website Project-->
+    <div id="fortniteProject" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close3">&times;</span>
+          <p> Website created as a fun introduction to the popular game Fortnite. The site highlights basic strategy, has a weapon chart, and 
+            gamer videos.(Languages Used: HTML, CSS, Javascript)
+          </p>
+        </div>
+    </div>
+    <section class = "projectList">
+        <h1> Shopping Cart Project</h1>
+          <button id = "desc1" class = "desc" onclick = "getModal('cartProject', 'desc1', 'close1')"> Description</button> <br>
+          <a class = "code" id = "code1" href = https://drive.google.com/drive/folders/1CTpnFyYer0uns4dWzgZx931Q5GaoUfZv?usp=sharing target = "_blank" > Code</a> <br>
+          <a id = "demo" href = https://drive.google.com/file/d/1TpfaW4DxBgYuV_M1GYVuHhfclTQERZ_a/view?usp=sharing target = "_blank"> Video Demo</a>           
+        <h1> TV Show Database Project</h1>
+          <button id = "desc2" class = "desc" onclick = "getModal('databaseProject', 'desc2', 'close2')"> Description</button> <br>
+          <a class = "code" id = "code2" href = https://drive.google.com/drive/folders/1UAL41vaA6QDN_cSb49C96Io9qmkbJFLw?usp=sharing target = "_blank" > Code</a> <br>
+        <h1> Fortnite Website Project</h1>
+          <button id = "desc3" class = "desc" onclick = "getModal('fortniteProject', 'desc3', 'close3')"> Description</button> <br>
+          <a class = "code" id = "code3" href = https://drive.google.com/drive/folders/1C7x56-78CXxGS8lMKSAsDjappBzMMEPg?usp=sharing target = "_blank" > Code</a> <br>
+          <a id = "link" href = http://jmp570.rutgers-sci.domains/index.html target="_blank"> Link To Site</a>
+    </section>
+
+    <footer class = "footer">
+        <p>&copy;2019 James Portelli</p>
+      </footer>
+      <!-- Javascript -->
+      <script>
+
+        function getModal(modId , btnId, closeClass){
+        // Get the modal
+        var modal = document.getElementById( modId );
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById(btnId);
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName(closeClass)[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      }
+        </script>
+      
+</body>
+
+
+</html> 
